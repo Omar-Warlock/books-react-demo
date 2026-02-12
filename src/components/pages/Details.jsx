@@ -40,9 +40,7 @@ export default function Details() {
               <h2 className="text-xl font-bold text-gray-800 mb-3">
                 Description
               </h2>
-              <p className="text-gray-600 leading-relaxed">
-                {book.description}
-              </p>
+              <p className="text-gray-600 leading-relaxed">{book.desc}</p>
             </div>
           </div>
         </div>

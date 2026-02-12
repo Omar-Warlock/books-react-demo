@@ -3,17 +3,26 @@
 import { useEffect, useState } from "react";
 import { FiArrowLeft } from "react-icons/fi";
 import { editBook, getBook } from "../../services/service";
-import { useParams } from "react-router-dom";
-
+import { useNavigate, useParams } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
 function Update() {
   const [book, setBook] = useState({});
   const { id } = useParams();
+  const navigate = useNavigate();
   useEffect(() => {
     getBook(id).then((res) => setBook(res.data));
   }, []);
   const handleDelete = function (e) {
     e.preventDefault();
     editBook(id, book);
+    toast.success("Book Updated successfully!", {
+      position: "top-right",
+      autoClose: 1500,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+    })();
   };
 
   return (
@@ -21,7 +30,10 @@ function Update() {
       <div className="max-w-2xl mx-auto">
         {/* Header */}
         <div className="mb-8">
-          <button className="flex items-center gap-2 text-blue-600 hover:text-blue-700 font-semibold mb-4">
+          <button
+            onClick={() => navigate("/")}
+            className="flex items-center gap-2 text-blue-600 hover:text-blue-700 font-semibold mb-4"
+          >
             <FiArrowLeft size={20} />
             Back
           </button>
@@ -100,6 +112,7 @@ function Update() {
                 Update Book
               </button>
               <button
+                onClick={() => navigate("/")}
                 type="button"
                 className="flex-1 bg-gray-300 text-gray-800 font-semibold py-2 px-6 rounded-lg hover:bg-gray-400 transition-colors duration-200"
               >
@@ -109,6 +122,17 @@ function Update() {
           </form>
         </div>
       </div>
+      <ToastContainer
+        position="top-right"
+        autoClose={2000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </div>
   );
 }
