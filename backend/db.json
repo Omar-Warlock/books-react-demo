@@ -1,0 +1,25 @@
+{
+  "books": [
+    {
+      "id": "1",
+      "title": "React Book",
+      "author": "Omar Mahmoud",
+      "price": 4000,
+      "desc": "Omar Is the best Developer"
+    },
+    {
+      "id": "2",
+      "title": "AI Book",
+      "author": "Alaa Moustafa",
+      "price": 5600,
+      "desc": "Alaa Is the best AI Engineer"
+    },
+    {
+      "id": "808e",
+      "title": "Laravel 11",
+      "price": "3600",
+      "author": "Hesham Mohamed",
+      "desc": "dasdasdasdasdasda"
+    }
+  ]
+}
