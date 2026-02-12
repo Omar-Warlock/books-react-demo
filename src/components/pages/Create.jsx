@@ -1,6 +1,8 @@
 import { useRef, useState } from "react";
 import { createBook } from "../../services/service";
-import { redirect, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function Create() {
   const [book, setBook] = useState({
@@ -11,22 +13,38 @@ export default function Create() {
   });
   const navigate = useNavigate();
   const formRef = useRef();
+
   function handleSubmit(e) {
     e.preventDefault();
-    let condition = true;
-    for (let value of Object.values(book)) {
-      if (value === "") {
-        condition = false;
-      }
-    }
-    if (condition) {
+    let valid = Object.values(book).every((value) => value !== "");
+
+    if (valid) {
       createBook(book)
-        .then(() => alert("book added"))
-        .then(() => navigate("/"));
+        .then(() => {
+          toast.success("Book created successfully!", {
+            position: "top-right",
+            autoClose: 1500,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+          });
+        })
+        .then(() => {
+          setTimeout(() => navigate("/"), 2000);
+        });
     } else {
-      alert("Please fill all inputs");
+      toast.error("Please fill in all fields!", {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
     }
   }
+
   return (
     <main className="min-h-screen bg-gray-50 py-12 px-4">
       <div className="max-w-2xl mx-auto bg-white rounded-lg shadow-md p-8">
@@ -87,6 +105,7 @@ export default function Create() {
               onChange={(e) => setBook({ ...book, desc: e.target.value })}
             ></textarea>
           </div>
+
           {/* Submit Button */}
           <button
             type="submit"
@@ -96,6 +115,18 @@ export default function Create() {
           </button>
         </form>
       </div>
+
+      <ToastContainer
+        position="top-right"
+        autoClose={2000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </main>
   );
 }

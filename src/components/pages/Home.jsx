@@ -2,16 +2,26 @@
 import { useEffect, useState } from "react";
 import Table from "../Table";
 import { deleteBook, getAllBooks } from "../../services/service";
+import { ToastContainer, toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 export default function Home() {
   const [books, setBooks] = useState([]);
-
+  const navigate = useNavigate();
   const handleDelete = (id) => {
     deleteBook(id);
     setBooks(books.filter((book) => book.id !== id));
+    toast.success("Book Deleted successfully!", {
+      position: "top-right",
+      autoClose: 1500,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+    })();
   };
 
   const handleUpdate = (id) => {
-    alert(`Update book with ID: ${id}`);
+    navigate(`/update/${id}`);
   };
   useEffect(() => {
     getAllBooks().then((res) => setBooks(res.data));
@@ -38,6 +48,18 @@ export default function Home() {
           </div>
         )}
       </div>
+
+      <ToastContainer
+        position="top-right"
+        autoClose={2000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </div>
   );
 }
