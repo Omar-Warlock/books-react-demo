@@ -1,10 +1,14 @@
+import { Link } from "react-router-dom";
+
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white py-12 px-4">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Brand Section */}
         <div>
-          <h3 className="text-2xl font-bold text-blue-400 mb-4">📚 BookHub</h3>
+          <h3 className="text-2xl font-bold text-blue-400 mb-4">
+            <Link to={"/"}>📚 BookHub</Link>
+          </h3>
           <p className="text-gray-400">
             Your ultimate destination for discovering and managing your favorite
             books online.
@@ -16,30 +20,30 @@ export default function Footer() {
           <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
           <ul className="space-y-2 text-gray-400">
             <li>
-              <a href="#home" className="hover:text-blue-400 transition-colors">
+              <Link to={"/"} className="hover:text-blue-400 transition-colors">
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#about"
+              <Link
+                to={"/about"}
                 className="hover:text-blue-400 transition-colors"
               >
                 About Us
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#contact"
+              <Link
+                to={"/contact"}
                 className="hover:text-blue-400 transition-colors"
               >
                 Contact
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="hover:text-blue-400 transition-colors">
+              <Link to={"/"} className="hover:text-blue-400 transition-colors">
                 Privacy Policy
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -57,7 +61,7 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="max-w-7xl mx-auto border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-        <p>&copy; 2024 BookHub. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} BookHub. All rights reserved.</p>
       </div>
     </footer>
   );

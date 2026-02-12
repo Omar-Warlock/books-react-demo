@@ -13,7 +13,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Links */}
-        <div className="hidden md:flex gap-8">
+        <div className="hidden md:flex gap-8 font-medium">
           <Link to="/" className="nav-link">
             HOME
           </Link>
