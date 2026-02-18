@@ -5,35 +5,133 @@
       "title": "React Book",
       "author": "Omar Mahmoud",
       "price": 4000,
-      "desc": "Omar Is the best Developer in egypt right n=know cc"
+      "desc": "Omar Is the best Developer in egypt right now"
     },
     {
       "id": "2",
-      "title": "AI Book",
-      "author": "Alaa Moustafa",
-      "price": 5600,
-      "desc": "Alaa Is the best AI Engineer"
+      "title": "Advanced React",
+      "author": "Sara Ali",
+      "price": "3800",
+      "desc": "Deep dive into advanced React concepts and hooks."
     },
     {
-      "id": "808e",
-      "title": "Laravel 11",
-      "price": "3600",
-      "author": "Hesham Mohamed",
-      "desc": "dasdasdasdasdasda"
+      "id": "5",
+      "title": "CSS Secrets",
+      "author": "Hassan Tarek",
+      "price": 2000,
+      "desc": "Professional techniques for modern CSS design."
     },
     {
-      "id": "0583",
-      "title": "dasd",
-      "price": "111",
-      "author": "asd",
-      "desc": "dasd"
+      "id": "6",
+      "title": "HTML Fundamentals",
+      "author": "Youssef Adel",
+      "price": 1500,
+      "desc": "Learn HTML from scratch with practical examples."
     },
     {
-      "id": "06f4",
-      "title": "asdas",
-      "price": "12222",
-      "author": "dasdas",
-      "desc": "sdasd"
+      "id": "7",
+      "title": "MongoDB Essentials",
+      "author": "Nour Ibrahim",
+      "price": 3200,
+      "desc": "Learn how to work with MongoDB databases."
+    },
+    {
+      "id": "8",
+      "title": "Express.js in Action",
+      "author": "Karim Mostafa",
+      "price": 2700,
+      "desc": "Build scalable APIs using Express.js."
+    },
+    {
+      "id": "9",
+      "title": "TypeScript Basics",
+      "author": "Laila Samy",
+      "price": 2900,
+      "desc": "Introduction to TypeScript and static typing."
+    },
+    {
+      "id": "10",
+      "title": "Next.js Handbook",
+      "author": "Mahmoud Fathy",
+      "price": 3600,
+      "desc": "Build server-side rendered React applications."
+    },
+    {
+      "id": "11",
+      "title": "Frontend Architecture",
+      "author": "Salma Nabil",
+      "price": 4100,
+      "desc": "Best practices for structuring frontend projects."
+    },
+    {
+      "id": "12",
+      "title": "Clean Code JS",
+      "author": "Ali Reda",
+      "price": 3300,
+      "desc": "Write clean and maintainable JavaScript code."
+    },
+    {
+      "id": "13",
+      "title": "Git & GitHub Guide",
+      "author": "Hany Atef",
+      "price": 1800,
+      "desc": "Learn version control with Git and GitHub."
+    },
+    {
+      "id": "14",
+      "title": "REST API Design",
+      "author": "Dina Wael",
+      "price": 3400,
+      "desc": "Design powerful and scalable RESTful APIs."
+    },
+    {
+      "id": "15",
+      "title": "Docker for Developers",
+      "author": "Mostafa Samir",
+      "price": 3700,
+      "desc": "Containerize your applications using Docker."
+    },
+    {
+      "id": "16",
+      "title": "Fullstack Development",
+      "author": "Eman Yasser",
+      "price": 4500,
+      "desc": "Complete roadmap to becoming a fullstack developer."
+    },
+    {
+      "id": "17",
+      "title": "Redux Simplified",
+      "author": "Tamer Galal",
+      "price": 2600,
+      "desc": "Understand state management using Redux."
+    },
+    {
+      "id": "18",
+      "title": "UI/UX Principles",
+      "author": "Reem Osama",
+      "price": 2400,
+      "desc": "Design better user interfaces and experiences."
+    },
+    {
+      "id": "19",
+      "title": "Testing React Apps",
+      "author": "Amr Mohamed",
+      "price": 3100,
+      "desc": "Learn how to test React applications properly."
+    },
+    {
+      "id": "20",
+      "title": "Web Security Basics",
+      "author": "Fatma Adel",
+      "price": 3800,
+      "desc": "Understand common web vulnerabilities and security."
+    },
+    {
+      "id": "21",
+      "title": "Performance Optimization",
+      "author": "Ola Magdy",
+      "price": 3900,
+      "desc": "Improve performance of frontend and backend apps."
     }
   ]
 }

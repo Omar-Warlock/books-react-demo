@@ -6,7 +6,6 @@ export default function About() {
   return (
     <main className="min-h-screen bg-gray-50 py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        {/* Header */}
         <div className="bg-white rounded-lg shadow-md p-8 mb-8">
           <h1 className="text-4xl font-bold text-gray-800 mb-4">About Us</h1>
           <p className="text-lg text-gray-600">
@@ -15,21 +14,24 @@ export default function About() {
           </p>
         </div>
 
-        {/* Developer Section */}
         <div className="bg-white rounded-lg shadow-md p-8 mb-8">
           <h2 className="text-3xl font-bold text-gray-800 mb-6">
             About the Developer
           </h2>
 
           <div className="flex flex-col md:flex-row gap-8 items-center md:items-start">
-            {/* Profile Image */}
             <div className="flex-shrink-0">
               <div className="w-40 h-40 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center">
-                <span className="text-6xl">💻</span>
+                <span className="text-xl">
+                  <img
+                    className="rounded-full"
+                    src="https://avatars.githubusercontent.com/u/189765988?v=4"
+                    alt=""
+                  />
+                </span>
               </div>
             </div>
 
-            {/* Description */}
             <div className="flex-1">
               <h3 className="text-2xl font-semibold text-gray-800 mb-4">
                 Frontend Developer
@@ -49,10 +51,9 @@ export default function About() {
                 or collaborating with other developers in the community.
               </p>
 
-              {/* Social Media Links */}
-              <div className="flex gap-6">
+              <div className="flex justify-left gap-4">
                 <a
-                  href="https://github.com"
+                  href="https://github.com/Omar-Warlock"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium"
@@ -61,7 +62,7 @@ export default function About() {
                   GitHub
                 </a>
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/omar-mahmmoud-/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium"
@@ -69,21 +70,11 @@ export default function About() {
                   <FaLinkedin size={20} />
                   LinkedIn
                 </a>
-                <a
-                  href="https://twitter.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium"
-                >
-                  <FaTwitter size={20} />
-                  Twitter
-                </a>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Mission Section */}
         <div className="bg-white rounded-lg shadow-md p-8">
           <h2 className="text-3xl font-bold text-gray-800 mb-6">Our Mission</h2>
           <p className="text-gray-700 leading-relaxed mb-4">

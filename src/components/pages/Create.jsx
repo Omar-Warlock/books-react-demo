@@ -54,7 +54,6 @@ export default function Create() {
         <p className="text-gray-600 mb-8">Add a new book to our collection</p>
 
         <form className="space-y-6" ref={formRef} onSubmit={handleSubmit}>
-          {/* Title Field */}
           <div>
             <label className="block text-gray-700 font-medium mb-2">
               Book Title
@@ -67,7 +66,6 @@ export default function Create() {
             />
           </div>
 
-          {/* Author Field */}
           <div>
             <label className="block text-gray-700 font-medium mb-2">
               Author Name
@@ -80,7 +78,6 @@ export default function Create() {
             />
           </div>
 
-          {/* Price Field */}
           <div>
             <label className="block text-gray-700 font-medium mb-2">
               Price ($)
@@ -93,7 +90,6 @@ export default function Create() {
             />
           </div>
 
-          {/* Description Field */}
           <div>
             <label className="block text-gray-700 font-medium mb-2">
               Description
@@ -106,7 +102,6 @@ export default function Create() {
             ></textarea>
           </div>
 
-          {/* Submit Button */}
           <button
             type="submit"
             className="w-full bg-blue-600 text-white font-medium py-3 rounded-lg hover:bg-blue-700 transition-colors"

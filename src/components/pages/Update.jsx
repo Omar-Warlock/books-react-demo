@@ -28,7 +28,6 @@ function Update() {
   return (
     <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-2xl mx-auto">
-        {/* Header */}
         <div className="mb-8">
           <button
             onClick={() => navigate("/")}
@@ -41,10 +40,8 @@ function Update() {
           <p className="text-gray-600 mt-2">Edit the book details below</p>
         </div>
 
-        {/* Form Card */}
         <div className="bg-white rounded-lg shadow-md p-8">
           <form className="space-y-6" onSubmit={handleDelete}>
-            {/* Book Title */}
             <div>
               <label className="block text-sm font-semibold text-gray-700 mb-2">
                 Book Title
@@ -58,7 +55,6 @@ function Update() {
               />
             </div>
 
-            {/* Author */}
             <div>
               <label className="block text-sm font-semibold text-gray-700 mb-2">
                 Author
@@ -72,9 +68,7 @@ function Update() {
               />
             </div>
 
-            {/* Price and Category Row */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {/* Price */}
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-2">
                   Price
@@ -89,7 +83,6 @@ function Update() {
               </div>
             </div>
 
-            {/* Description */}
             <div>
               <label className="block text-sm font-semibold text-gray-700 mb-2">
                 Description
@@ -103,7 +96,6 @@ function Update() {
               />
             </div>
 
-            {/* Buttons */}
             <div className="flex gap-4 pt-6">
               <button
                 type="submit"

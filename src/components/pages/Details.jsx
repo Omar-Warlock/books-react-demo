@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { IoArrowBack } from "react-icons/io5";
 import { getBook } from "../../services/service";
 
 export default function Details() {
   const { id } = useParams();
   const [book, setBook] = useState({});
-
+  const navigate = useNavigate();
   useEffect(() => {
     getBook(id).then((res) => setBook(res.data));
   }, [id]);
@@ -14,13 +14,14 @@ export default function Details() {
   return (
     <div className="min-h-screen bg-gray-50 py-8">
       <div className="max-w-5xl mx-auto px-4">
-        <Link
+        <button
+          onClick={() => navigate("/")}
           to="/"
           className="flex items-center gap-2 text-blue-600 hover:text-blue-700 mb-8 transition-colors"
         >
           <IoArrowBack size={20} />
           <span className="font-medium">Return to Home</span>
-        </Link>
+        </button>
 
         <div className="bg-white rounded-lg shadow-lg overflow-hidden">
           <div className="p-8">

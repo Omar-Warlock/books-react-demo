@@ -7,7 +7,6 @@ export default function Navbar() {
   return (
     <nav className="bg-white shadow-md">
       <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-        {/* Logo */}
         <Link to="/" className="text-2xl font-bold text-blue-600">
           📚 BookHub
         </Link>
@@ -25,7 +24,6 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Desktop Button */}
         <Link
           to="/create"
           className="hidden md:inline-block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium"
@@ -39,7 +37,6 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Menu */}
       {open && (
         <div className="md:hidden px-4 pb-4 flex flex-col gap-4">
           <Link onClick={() => setOpen(false)} to="/">
