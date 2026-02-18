@@ -30,7 +30,7 @@ function Table({ books, handleDelete, handleUpdate }) {
             <td className="px-6 py-4 text-center">
               <div className="flex gap-3 justify-center">
                 <Link
-                  to={`courses/${book.id}`}
+                  to={`book/${book.id}`}
                   className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition-colors font-medium text-sm"
                 >
                   Show
